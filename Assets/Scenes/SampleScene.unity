@@ -270,7 +270,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1623737950}
-        m_MethodName: OnClickButton
+        m_MethodName: OnClickPushButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -29,7 +29,7 @@ public class MainObject : MonoBehaviour
                 Debug.Log(msg);
             };
 
-        AndroidNotificationCenter.OnNotificationReceived += receivedNotificationHandler;
+        AndroidNotificationCenter.OnNotificationReceived += receivedNotificationHandler;        
     }
 
     // Update is called once per frame
@@ -42,8 +42,10 @@ public class MainObject : MonoBehaviour
     {
 #if UNITY_ANDROID
         var notification = new AndroidNotification();
+        notification.SmallIcon = "icon_0";
         notification.Title = "SomeTitle";
         notification.Text = "SomeText";
+        notification.ShouldAutoCancel = true;
         notification.FireTime = System.DateTime.Now.AddSeconds(5);
 
         AndroidNotificationCenter.SendNotification(notification, "123");
